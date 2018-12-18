@@ -1,0 +1,7 @@
+<!--- TEMPLATENAME: nostoCustomerTags.isml --->
+<div class="nosto_customer" style="display:none">
+	<span class="email">${pdict.customerEmail}</span>
+	<span class="first_name">${pdict.customerFirstName}</span>
+	<span class="last_name">${pdict.customerLastName}</span>
+	<span class="marketing_permission">${pdict.customerMarketingPermission}</span>
+</div>

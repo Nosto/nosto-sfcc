@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xmlns="http://www.demandware.com/xml/impex/metadata/2006-10-31">
+    <type-extension type-id="Category">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="nostoBrand">
+                <display-name xml:lang="x-default">Is Nosto Brand</display-name>
+                <description xml:lang="x-default">To differentiate if this is category or brand</description>
+                <type>boolean</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+        </custom-attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="nosto">
+                <display-name xml:lang="x-default">Nosto</display-name>
+                <attribute attribute-id="nostoBrand"/>
+            </attribute-group>
+        </group-definitions>
+    </type-extension>
+
+    <type-extension type-id="SitePreferences">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="nostoEnableTagging">
+                <display-name xml:lang="x-default">Enable Nosto tagging</display-name>
+                <description xml:lang="x-default">To turn tagging on/off</description>
+                <type>boolean</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <default-value>false</default-value>
+            </attribute-definition>
+            <attribute-definition attribute-id="nostoProductConfig">
+                <display-name xml:lang="x-default">Nosto Product attribute configuration</display-name>
+                <description xml:lang="x-default">JSON to hold product attributes to take values from.</description>
+                <type>text</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="nostoScriptURL">
+                <display-name xml:lang="x-default">Nosto Script link</display-name>
+                <description xml:lang="x-default">JSON with script URL including account id for different locales.</description>
+                <type>text</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+        </custom-attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="nostoSettings">
+                <display-name xml:lang="x-default">Nosto Settings</display-name>
+                <attribute attribute-id="nostoEnableTagging"/>
+                <attribute attribute-id="nostoScriptURL"/>
+                <attribute attribute-id="nostoProductConfig"/>
+            </attribute-group>
+        </group-definitions>
+    </type-extension>
+</metadata>

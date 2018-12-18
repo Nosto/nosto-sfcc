@@ -1,0 +1,45 @@
+<!--- TEMPLATENAME: nostoPDPTags.isml --->
+<div class="nosto_page_type" style="display:none">product</div>
+<div class="nosto_category">${pdict.primaryCategory}</div>
+<div class="nosto_product" style="display:none">
+	<span class="name">${pdict.name}</span>
+	<span class="url">${pdict.url}</span>
+ 	<span class="image_url">${pdict.images.mainImage}</span>
+ 	<span class="availability">${pdict.availability}</span>
+	<isloop iterator="${pdict.images.alternates}" alias="altImage">
+		<span class="alternate_image_url">${altImage}</span>
+	</isloop>
+	<span class="price">${pdict.prices.price}</span>
+	<span class="list_price">${pdict.prices.listPrice}</span>
+	<span class="price_currency_code">${pdict.currencyCode}</span>
+	<isloop iterator="${pdict.categories}" alias="category">
+		<span class="category">${category}</span>
+	</isloop>
+	<isloop iterator="${pdict.preferenceFields.fields}" alias="fields">
+		<span class="${fields.name}">${fields.value}</span>
+	</isloop>
+	<span class="custom_fields">
+		<isloop iterator="${pdict.preferenceFields.customFields}" alias="customFields">
+			<span class="${customFields.name}">${customFields.value}</span>
+		</isloop>
+	</span>
+	<isloop iterator="${pdict.skus}" alias="skus">
+		<span class="nosto_sku">
+	    <span class="id">${skus.ID}</span>
+	    <span class="name">${skus.name}</span>
+	    <span class="price">${skus.price}</span>
+	    <span class="list_price">${skus.listPrice}</span>
+	    <span class="url">${skus.url}</span>
+	    <span class="image_url">${skus.image}</span>
+	    <span class="availability">${skus.availability}</span>
+	    <isloop iterator="${skus.preferenceFields.fields}" alias="fields">
+	    	<span class="${fields.name}">${fields.value}</span>
+	    </isloop>
+	    <span class="custom_fields">
+		    <isloop iterator="${skus.preferenceFields.customFields}" alias="customFields">
+		    	<span class="${customFields.name}">${customFields.value}</span>
+		    </isloop>
+	    </span>
+	  </span>		
+	</isloop>
+</div>

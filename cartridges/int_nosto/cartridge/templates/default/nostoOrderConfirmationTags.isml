@@ -1,0 +1,25 @@
+<!--- TEMPLATENAME: nostoOrderConfirmationTags.isml --->
+<div class="nosto_page_type" style="display:none">order</div>
+<div class="nosto_purchase_order" style="display:none">
+    <span class="order_number">${pdict.OrderNo}</span>
+ 
+    <div class="buyer">
+        <span class="email">${pdict.customer.customerEmail}</span>
+        <span class="first_name">${pdict.customer.customerFirstName}</span>
+        <span class="last_name">${pdict.customer.customerLastName}</span>
+        <span class="marketing_permission">${pdict.customer.marketingPermission}</span>
+    </div>
+ 
+    <div class="purchased_items">
+		<isloop iterator="${pdict.lineItems}" alias="lineItem">
+		    <div class="line_item">
+		        <span class="product_id">${lineItem.ID}</span>
+		        <span class="sku_id">${lineItem.sku}</span>
+		        <span class="quantity">${lineItem.quantity}</span>
+		        <span class="name">${lineItem.name}</span>
+		        <span class="unit_price">${lineItem.unitPrice}</span>
+		        <span class="price_currency_code">${lineItem.currencyCode}</span>
+		    </div>
+	    </isloop>
+    </div>
+</div>

@@ -1,0 +1,9 @@
+<!--- TEMPLATENAME: nostoHeaderScript.isml --->
+<isscript>
+var nostoHelper = require('int_nosto/cartridge/scripts/helpers/nostoHelper').getNostoHelper();
+var enabledNostoTagging = nostoHelper.getEnableNostoTagging();
+var nostoHeaderScript = nostoHelper.getNostoScriptURLByLocale();
+</isscript>
+<isif condition="${enabledNostoTagging}">
+	<isprint value="${nostoHeaderScript}" encoding="off"/>
+</isif>

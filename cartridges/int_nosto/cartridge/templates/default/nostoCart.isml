@@ -1,0 +1,13 @@
+<!--- TEMPLATENAME: nostoCart.isml --->
+<div class="nosto_cart" style="display:none">
+	<isloop iterator="${pdict.lineItems}" alias="lineItem">
+	    <div class="line_item">
+	        <span class="product_id">${lineItem.ID}</span>
+	        <span class="sku_id">${lineItem.sku}</span>
+	        <span class="quantity">${lineItem.quantity}</span>
+	        <span class="name">${lineItem.name}</span>
+	        <span class="unit_price">${lineItem.unitPrice}</span>
+	        <span class="price_currency_code">${lineItem.currencyCode}</span>
+	    </div>
+    </isloop>
+</div>
