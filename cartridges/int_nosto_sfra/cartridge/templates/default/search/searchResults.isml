@@ -1,0 +1,13 @@
+<isdecorate template="common/layout/page">
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets');
+        assets.addJs('/js/search.js');
+        assets.addCss('/css/search.css');
+    </isscript>
+
+    <isinclude template="search/searchResultsNoDecorator" />
+    <isscript>
+		var nostoHelper = require('int_nosto/cartridge/scripts/helpers/nostoHelper').getNostoHelper();
+	</isscript>
+	<isprint value="${nostoHelper.getCategoryTags(pdict.productSearch.category.id)}" encoding="off"/>
+</isdecorate>
